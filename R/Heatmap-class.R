@@ -1433,7 +1433,7 @@ make_cluster = function(object, which = c("row", "column")) {
                     }
                     order_list[[i]] = order_list[[i]][ get_dend_order(dend_list[[i]]) ]
                 } else {
-
+                        print(dim(submat))
                         if(which == "row") {
                             dend_list[[i]] = hclust(get_dist(submat, distance), method = method)
                         } else {
